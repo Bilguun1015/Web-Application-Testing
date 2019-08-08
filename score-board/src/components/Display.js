@@ -2,10 +2,10 @@ import React from "react"
 
 const Display = ({strikes, balls}) => {
     return (
-        <>
-            <p>Strike: {strikes}</p>
-            <p>Balls: {balls}</p>
-        </>
+        <div className="display">
+            <h2>Display</h2>
+            <p>Strike: {strikes}  Balls: {balls}</p>
+        </div>
     )
 }
 

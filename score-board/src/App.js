@@ -7,7 +7,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h1>Board</h1>
+      <h1>Score Board Display</h1>
       <Dashboard />
     </div>
   );

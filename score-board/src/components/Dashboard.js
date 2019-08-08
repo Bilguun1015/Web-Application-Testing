@@ -52,7 +52,8 @@ class Dashboard extends React.Component {
                 <Display strikes={this.state.strikes}
                 balls = {this.state.balls}    
                 />
-                <div>
+                <div className='buttons'>
+                    <h2>Dashboard</h2>
                     <button onClick={ this.strike}>Strike</button>
                     <button onClick={this.ball}>Ball</button>
                     <button onClick={this.foul}>Foul</button>
