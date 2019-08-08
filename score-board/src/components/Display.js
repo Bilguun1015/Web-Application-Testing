@@ -3,8 +3,8 @@ import React from "react"
 const Display = ({strikes, balls}) => {
     return (
         <>
-            <p>{strikes}</p>
-            <p>{balls}</p>
+            <p>Strike: {strikes}</p>
+            <p>Balls: {balls}</p>
         </>
     )
 }

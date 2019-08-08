@@ -15,18 +15,26 @@ class Dashboard extends React.Component {
         this.setState({
             strikes: this.state.strikes+1});
         if(this.state.strikes > 1){
-            this.setState({strikes: 0})
-            this.setState({balls: 0})
+            this.setState({strikes: 0, balls: 0})
         }
         //console.log('after: ' + this.state.strikes);
     }
      ball = () => {
         this.setState({balls: this.state.balls+1})
         if (this.state.balls > 2){
-            this.setState({strikes: 0})
-            this.setState({balls: 0})
+            this.setState({strikes: 0, balls: 0})
         }
         console.log('after: ' + this.state.balls);
+      }
+
+      foul = () => {
+          if(this.state.strikes < 2){
+              this.setState({strikes: this.state.strikes+1})
+          }
+      }
+
+      hit = () => {
+          this.setState({strikes:0, balls: 0})
       }
     //  checkMax = () => {
     //     if(this.state.strikes > 3){
@@ -47,8 +55,8 @@ class Dashboard extends React.Component {
                 <div>
                     <button onClick={ this.strike}>Strike</button>
                     <button onClick={this.ball}>Ball</button>
-                    <button>Foul</button>
-                    <button>Hit</button>
+                    <button onClick={this.foul}>Foul</button>
+                    <button onClick={this.hit}>Hit</button>
                 </div>
             </>
         )
